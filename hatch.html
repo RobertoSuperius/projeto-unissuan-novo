@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>skycars</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #003366;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-form {
+    position: relative;
+}
+
+.login-button {
+    padding: 5px 10px;
+    font-size: 14px;
+    background-color: #0066cc;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.login-dropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background-color: #fff;
+    color: #333;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 1000;
+    border-radius: 10px;
+}
+
+.login-dropdown form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.login-dropdown input {
+    padding: 5px;
+    font-size: 14px;
+}
+
+.login-dropdown button {
+    padding: 5px 10px;
+    font-size: 14px;
+    background-color: #0066cc;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.login-dropdown a {
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.login-form:hover .login-dropdown {
+    display: block;
+}
+
+.secao-pesquisa {
+    background-color: #fff;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.secao-pesquisa h2 {
+    margin-bottom: 20px;
+    color: #003366;
+}
+
+.secao-pesquisa form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.secao-pesquisa input,
+.secao-pesquisa select,
+.secao-pesquisa button {
+    padding: 10px;
+    font-size: 16px;
+}
+
+.secao-pesquisa button {
+    background-color: #003366;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.secao-categoria {
+    background-color: #fff;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.secao-categoria h2 {
+    margin-bottom: 20px;
+    color: #003366;
+}
+
+.categorias {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.categoria {
+    background-color: #fff;
+    padding: 20px;
+    border: 2px solid #003366;
+    border-radius: 15px;
+    text-align: center;
+    flex: 1 1 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.categoria img {
+    max-width: 100%;
+    height: auto;
+}
+
+.categoria h3 {
+    margin-top: 10px;
+    color: #003366;
+}
+
+.categoria p {
+    margin-top: 10px;
+    color: #333;
+}
+
+.secao-destaque {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.secao-destaque h2 {
+    margin-bottom: 20px;
+    color: #003366;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(3, 3, 3, 0.1);
+    text-align: center;
+    flex: 1 1 200px;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+}
+
+footer {
+    background-color: #003366;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+input[type="submit"] {
+    background-color: #0066cc;
+    color: white;
+    cursor: pointer;
+    height: 30px;
+}
+
+img {
+    border-radius: 10px;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <h1>skycars</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#">Comprar</a></li>
+                    <li><a href="#">Vender</a></li>
+                    <li><a href="#">Notícias</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="login-form">
+                <button class="login-button">Login</button>
+                <div class="login-dropdown">
+                    <form>
+                        <input type="text" placeholder="Usuário">
+                        <input type="password" placeholder="Senha">
+                        <button type="submit">Login</button>
+                    </form>
+                    <a href="register.html">Crie uma conta</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="secao-pesquisa">
+      
+    </section>
+    <section class="secao-categoria">
+        <div class="container">
+            <h2>Hatch</h2>
+            <div class="categorias">
+                <div class="categoria">
+                    <img src="hatch1.jpg" alt="Sedan">
+                    <h3>Renault Kwid Zen
+                    </h3>
+                    <P>R$:103.990,00</P>
+                    <br>
+                    <input type="submit" value="Comprar">
+                </div>
+                <div class="categoria">
+                    <img src="hatch2.jpg" alt="Hatch">
+                    <h3>Fiat Mobi Like
+                    </h3>
+                    <p>R$:210.990,00</p>
+                    <br>
+                    <input type="submit" value="Comprar">
+                </div>
+                <div class="categoria">
+                    <img src="hatch3.jpg" alt="Picape">
+                    <h3>Volkswagen Gol 1.0
+                    </h3>
+                    <p>R$:99.990,00</p>
+                    <br>
+                    <input type="submit" value="Comprar">
+                </div>
+                <div class="categoria">
+                    <img src="hatch4.jpg" alt="SUV">
+                    <h3>Fiat Argo Drive
+                    </h3>
+                    <p>R$:242.590,00</p>
+                    <br>
+                    <input type="submit" value="Comprar">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="secao-destaque">
+        <div class="container">
+            <h2>Destaques</h2>
+            <div class="cards">
+                <div class="card">
+                    <img src="destaque1.jpg" alt="Carro 1">
+                    <h3>Volkswagen saveiro</h3>
+                    <p>1.6 CROSS CD 16V FLEX 2P MANUAL</p>
+                </div>
+                <div class="card">
+                    <img src="destaque2.jpg" alt="Carro 2">
+                    <h3>Volkswagen Amarok 2018</h3>
+                    <p>2.0 HIGHLINE 4X4 CD 16V TURBO INTERCOOLER DIESEL 4P</p>
+                </div>
+                <div class="card">
+                    <img src="destaque3.jpg" alt="Carro 3">
+                    <h3>Nissan Leaf</h3>
+                    <p>B12P 40 ELÉTRICO</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 skycars. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
